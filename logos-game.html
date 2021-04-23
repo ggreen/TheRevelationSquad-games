@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="squad-game.js"></script>
+    <script>
+      document.onkeydown = function(e){
+        if(e.keyCode == KEY_BOARD_CODE )
+        {
+          jumpLogos();
+        }
+        else if(e.keyCode == LEFT_ARROW_CODE )
+        {
+          moveLogosLeft();
+        }
+        else if(e.keyCode == RIGHT_ARROW_CODE )
+        {
+          moveLogosRight();
+        }
+        
+
+    };
+    </script>
+  </head>
+  <style>
+    #myContainer {
+      position: relative;
+    }
+    #myAnimation {
+      position: absolute;
+    }
+    #falseProphetPanel {
+      position: absolute;
+      top: 130px;
+      left: 500px;
+    }
+    #firePanel {
+      position: absolute;
+      top: 200px;
+      left: 500px;
+    }
+    
+  </style>
+  <body>
+    <p>
+      <button onclick="moveLogosLeft()">&lt;</button>
+      <button onclick="moveLogosRight()">&gt;</button>
+      <button onclick="jumpLogos()">^</button>
+      <button onclick="fire()">fire</button>
+      <button onclick="animation()">animate</button>
+    </p>
+
+    <div id="myContainer">
+
+      <div id="firePanel">
+        <img id="fire" src="img/darts.jpg" />
+      </div>
+
+      <div id="falseProphetPanel">
+        <img id="logos" src="img/False-Prophet.jpg" />
+      </div>
+      <div id="myAnimation" style="top:100px">
+        <img id="logos" src="img/logos-action.jpg" />
+      </div>
+    </div>
+  </body>
+</html>
